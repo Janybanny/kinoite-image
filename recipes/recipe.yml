@@ -27,25 +27,24 @@ modules:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       install:
-        - Bottles: com.usebottles.bottles
-        - GIMP: org.gimp.GIMP
-        - Gwenview: org.kde.gwenview
-        - Ktorrent: org.kde.ktorrent
-        - Libreoffice: org.libreoffice.LibreOffice
-        - Firefox: org.mozilla.firefox
-        - Mpv: io.mpv.Mpv
-        - Okular: org.kde.okular
-        - Olympus: io.github.everestapi.Olympus
-        - Prism Launcher: org.prismlauncher.PrismLauncher
-        - ProtonVPN: com.protonvpn.www
-        - Signal: org.signal.Signal
-        - Spotify: com.spotify.Client
-        - Steam: com.valvesoftware.Steam
-        - Proton-GE: com.valvesoftware.Steam.CompatibilityTool.Proton-GE # Package removed, will add again if it's back
-        - ProtonUp-Qt: net.davidotek.pupgui2 # Replacement for proton-ge
-        - Teams: com.github.IsmaelMartinez.teams_for_linux
-        - Vesktop: dev.vencord.Vesktop
-        - Xournalpp: com.github.xournalpp.xournalpp
+        - com.usebottles.bottles
+        - org.gimp.GIMP
+        - org.kde.gwenview
+        - org.kde.ktorrent
+        - org.libreoffice.LibreOffice
+        - org.mozilla.firefox
+        - io.mpv.Mpv
+        - org.kde.okular
+        - io.github.everestapi.Olympus
+        - org.prismlauncher.PrismLauncher
+        - com.protonvpn.www
+        - org.signal.Signal
+        - com.spotify.Client
+        - com.valvesoftware.Steam
+        - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+        - com.github.IsmaelMartinez.teams_for_linux
+        - dev.vencord.Vesktop
+        - com.github.xournalpp.xournalpp
       
   - type: akmods
     install:
