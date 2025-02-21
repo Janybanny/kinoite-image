@@ -46,9 +46,5 @@ modules:
         - dev.vencord.Vesktop
         - com.github.xournalpp.xournalpp
       
-  - type: akmods
-    install:
-      - xpadneo # Bluetooth Controller support
-      
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
