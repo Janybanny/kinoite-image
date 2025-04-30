@@ -15,6 +15,7 @@ modules:
       # - rclone # TODO
       - qt6-qtimageformats
       - kf6-kimageformats
+      - kdevelop
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
