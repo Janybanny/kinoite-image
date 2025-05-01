@@ -21,7 +21,19 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - kwrite # kate is installed as well and kwrite just gets in the way
       - plasma-discover-notifier # updates are applied automatically, so the notifier is just in the way
-
+  # Auto Updates
+  - type: files
+    files:
+      - source: bootc-update
+        destination: /usr/lib/systemd/system
+  - type: systemd
+    system:
+      masked:
+        - ublue-update.timer
+        - rpm-ostreed-automatic.timer
+      enabled:
+        - bootc-fetch-apply-updates.timer
+        
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
