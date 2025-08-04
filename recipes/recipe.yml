@@ -33,30 +33,38 @@ modules:
         - rpm-ostreed-automatic.timer
       enabled:
         - bootc-fetch-apply-updates.timer
-        
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      install:
-        - com.usebottles.bottles
-        - org.gimp.GIMP
-        - org.kde.gwenview
-        - org.kde.ktorrent
-        - org.libreoffice.LibreOffice
-        - org.mozilla.firefox
-        - io.mpv.Mpv
-        - org.kde.okular
-        - io.github.everestapi.Olympus
-        - org.prismlauncher.PrismLauncher
-        - com.protonvpn.www
-        - org.signal.Signal
-        - com.spotify.Client
-        - com.valvesoftware.Steam
-        - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
-        - com.github.IsmaelMartinez.teams_for_linux
-        - dev.vencord.Vesktop
-        - com.github.xournalpp.xournalpp
-      
+    configurations:
+      - notify: false # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        install:
+          - app.zen_browser.zen
+          - com.github.IsmaelMartinez.teams_for_linux
+          - com.heroicgameslauncher.hgl
+          - com.protonvpn.www
+          - com.spotify.Client
+          - com.usebottles.bottles
+          - com.valvesoftware.Steam
+          - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+          - dev.vencord.Vesktop
+          - io.github.everestapi.Olympus
+          - io.github.tfuxu.Halftone
+          - io.mpv.Mpv
+          - org.blender.Blender
+          - org.fedoraproject.MediaWriter
+          - org.gimp.GIMP
+          - org.godotengine.Godot
+          - org.inkscape.Inkscape
+          - org.kde.gwenview
+          - org.kde.kdenlive
+          - org.kde.krita
+          - org.kde.ktorrent
+          - org.kde.okular
+          - org.kde.skanpage
+          - org.libreoffice.LibreOffice
+          - org.mozilla.firefox
+          - org.prismlauncher.PrismLauncher
+          - org.signal.Signal
+          - us.zoom.Zoom
+        
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
