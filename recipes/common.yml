@@ -24,7 +24,7 @@ modules:
     # Auto Updates
   - type: files
     files:
-      - source: auto-update
+      - source: auto-updates
         destination: /usr/lib/systemd/system
   - type: systemd
     system:
