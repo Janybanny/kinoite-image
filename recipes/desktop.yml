@@ -1,0 +1,35 @@
+# image will be published to ghcr.io/<user>/<name>
+name: desktop-image
+description: This is my personal OS image for my desktop.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/kinoite-nvidia
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common.yml
+
+  - type: default-flatpaks
+    configurations:
+      - notify: false
+        scope: system
+        install:
+          - com.heroicgameslauncher.hgl
+          - com.spotify.Client
+          - com.usebottles.bottles
+          - com.valvesoftware.Steam
+          - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+          - dev.vencord.Vesktop
+          - io.github.everestapi.Olympus
+          - org.blender.Blender
+          - org.gimp.GIMP
+          - org.godotengine.Godot
+          - org.inkscape.Inkscape
+          - org.kde.kdenlive
+          - org.kde.krita
+          - org.kde.ktorrent
+          - org.prismlauncher.PrismLauncher
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

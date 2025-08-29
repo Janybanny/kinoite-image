@@ -1,0 +1,53 @@
+modules:
+  - type: rpm-ostree
+    install:
+      # backups TODO
+      # development tools
+      #   https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tsserver
+      - kate
+      - nodejs
+      - gcc
+      - gcc-c++
+      - python3
+      - python3-pip
+      - make
+      - git
+      - clang
+      - clang-tools-extra
+    remove:
+      - firefox # default firefox removed in favor of flatpak
+      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - kwrite # kate is installed as well and kwrite just gets in the way
+      - plasma-discover-notifier # updates are applied automatically, so the notifier is just in the way
+      - plasma-discover-rpm-ostree # makes sure I don't accidentally use rpm ostree
+
+    # Auto Updates
+  - type: files
+    files:
+      - source: auto-update
+        destination: /usr/lib/systemd/system
+  - type: systemd
+    system:
+      masked:
+        - ublue-update.timer
+        - rpm-ostreed-automatic.timer
+      enabled:
+        - bootc-fetch-apply-updates.timer
+        - flatpak-system-update.timer
+
+    # Install Apps
+  - type: default-flatpaks
+    configurations:
+      - notify: false # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        install:
+          - app.zen_browser.zen
+          - com.protonvpn.www
+          - io.mpv.Mpv
+          - org.fedoraproject.MediaWriter
+          - org.kde.gwenview
+          - org.kde.okular
+          - org.kde.skanpage
+          - org.libreoffice.LibreOffice
+          - org.signal.Signal
+          - us.zoom.Zoom
