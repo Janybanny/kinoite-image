@@ -19,7 +19,7 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - kwrite # kate is installed as well and kwrite just gets in the way
       - plasma-discover-notifier # updates are applied automatically, so the notifier is just in the way
-      - plasma-discover-rpm-ostree # makes sure I don't accidentally use rpm ostree
+      # - plasma-discover-rpm-ostree # makes sure I don't accidentally use rpm ostree TODO already done by the base image, enable when changed
 
     # Auto Updates
   - type: files
