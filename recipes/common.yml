@@ -1,30 +1,30 @@
 modules:
   - type: dnf
-  install:
-    packages:
-      # backups TODO
-      # development tools
-      #   https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tsserver
-      - kate
-      - nodejs
-      - gcc
-      - gcc-c++
-      - python3
-      - python3-pip
-      - make
-      - git
-      - clang
-      - clang-tools-extra
-      - lldb
-      - dotnet-sdk-9.0
-      - gdb
-  remove:
-    packages:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - kwrite # kate is installed as well and kwrite just gets in the way
-      - plasma-discover-notifier # updates are applied automatically, so the notifier is just in the way
-      # - plasma-discover-rpm-ostree # makes sure I don't accidentally use rpm ostree TODO already done by the base image, enable when changed
+    install:
+        packages:
+        # backups TODO
+        # development tools
+        #   https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#tsserver
+        - kate
+        - nodejs
+        - gcc
+        - gcc-c++
+        - python3
+        - python3-pip
+        - make
+        - git
+        - clang
+        - clang-tools-extra
+        - lldb
+        - dotnet-sdk-9.0
+        - gdb
+    remove:
+        packages:
+        - firefox # default firefox removed in favor of flatpak
+        - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+        - kwrite # kate is installed as well and kwrite just gets in the way
+        - plasma-discover-notifier # updates are applied automatically, so the notifier is just in the way
+        # - plasma-discover-rpm-ostree # makes sure I don't accidentally use rpm ostree TODO already done by the base image, enable when changed
 
     # Auto Updates
   - type: files
