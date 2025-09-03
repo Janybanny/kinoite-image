@@ -31,7 +31,7 @@ modules:
     scripts:
       - omnisharp.sh
       - superhtml.sh
-
+      - netcoredbg.sh
 
     # Auto Updates
   - type: files
