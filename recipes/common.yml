@@ -26,6 +26,13 @@ modules:
         - plasma-discover-notifier # updates are applied automatically, so the notifier is just in the way
         # - plasma-discover-rpm-ostree # makes sure I don't accidentally use rpm ostree TODO already done by the base image, enable when changed
 
+    # Install apps without packages TODO Doesn't work yet
+  - type: script
+    scripts:
+      - omnisharp.sh
+      - superhtml.sh
+
+
     # Auto Updates
   - type: files
     files:
