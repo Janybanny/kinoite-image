@@ -32,6 +32,7 @@ modules:
       - omnisharp.sh
       - superhtml.sh
       - netcoredbg.sh
+      - marksman.sh
 
     # Auto Updates
   - type: files
