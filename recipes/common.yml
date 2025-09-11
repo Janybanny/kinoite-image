@@ -18,7 +18,6 @@ modules:
         - lldb
         - dotnet-sdk-9.0
         - gdb
-        - rstudio-desktop
     remove:
         packages:
         - firefox # default firefox removed in favor of flatpak
