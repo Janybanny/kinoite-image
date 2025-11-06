@@ -2,8 +2,12 @@
 Description=Apply bootc updates
 Documentation=man:bootc(8)
 ConditionPathExists=/run/ostree-booted
+StartLimitBurst=5
+StartLimitIntervalSec=1000
 
 [Service]
 Type=oneshot
+Restart=on-failure
+RestartSec=60
 # ExecStart=/usr/bin/bootc update --apply --quiet
 ExecStart=/usr/bin/bootc update --quiet
