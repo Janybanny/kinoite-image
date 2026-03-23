@@ -17,7 +17,6 @@ modules:
         - clang
         - clang-tools-extra
         - lldb
-        - dotnet-sdk-9.0
         - gdb
         - ramalama
     remove:
