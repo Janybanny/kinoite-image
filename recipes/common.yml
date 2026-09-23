@@ -19,6 +19,7 @@ modules:
         - lldb
         - gdb
         - ramalama
+        - podman-compose
     remove:
         packages:
         - firefox # default firefox removed in favor of flatpak
