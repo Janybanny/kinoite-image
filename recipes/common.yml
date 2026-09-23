@@ -31,7 +31,7 @@ modules:
     # Install apps without packages TODO Doesn't work yet
   - type: script
     scripts:
-      - omnisharp.sh
+      # - omnisharp.sh Omnisharp just completely changed in 2.0, so I'm excluding it (also using Rider lol)
       - superhtml.sh
       - netcoredbg.sh
       - marksman.sh
